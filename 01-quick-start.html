@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1</title>
 </head>
 <body>
-    
+    <div id="app">
+        <h1>{{count}}</h1>
+        <hr>
+        <p>{{name}}{{kind}}</p>
+        <div>{{talk}}</div>
+        <div>{{array}}</div>
+        <div>{{talk ? '愛講話': '吼唷'}}</div> 
+        <!-- 如果是ture會是左邊 false是右邊 問號要加 -->
+
+        <div>{{obj}}</div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        // console.log(Vue)
+        Vue.createApp({
+            data(){
+                return{
+                    count: 1,
+                    name : "🐢",
+                    kind: "😊",
+                    talk: true, //boolean
+                    array: [1,2,3],
+                    obj:{text:'123'}
+                };
+            }
+        }).mount('#app');
+    </script>
 </body>
 </html>
